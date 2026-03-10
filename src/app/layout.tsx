@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 //preloaded font file - not currently being used so i (isa) commented it out
 //import { Geist, Geist_Mono } from "next/font/google";
 import "../styles/globals.css";
-import Footer from "../components/footer";
+import Footer from "./_components/footer";
 import Navbar from "./_components/navbar";
 
 export const metadata: Metadata = {
