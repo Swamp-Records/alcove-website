@@ -4,10 +4,16 @@ import type { Metadata } from "next";
 import "../styles/globals.css";
 import Navbar from "./_components/navbar";
 
+//metadata for the root layout
 export const metadata: Metadata = {
-  //changed meta info so the title + description are correct
-  title: "Alcove Band",
+  title: {
+    default: "Alcove | Official Band Website",
+    template: "%s | Alcove",
+  },
   description: "Official website for the band Alcove",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
