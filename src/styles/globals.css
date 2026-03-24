@@ -20,10 +20,33 @@
   }
 }
 
+/* FONTS */
+@font-face {
+  font-family: 'Crostan';
+  src: url('/fonts/crostan-bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Crostan';
+  src: url('/fonts/crostan-regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Godens DEMO';
+  src: url('/fonts/godens-demo-regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* BODY */
 .body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Crostan', 'Godens DEMO', sans-serif;
 }
 
 /* NAVBAR STYLES */
@@ -41,10 +64,11 @@
 }
 
 .nav-links {
+  font-family: 'Crostan';
+  font-weight: 700;
   display: flex;
   color:#ededed;
   gap: 40px;
-  font-size: 1.25rem;
   margin-right: 40px;
 }
 
