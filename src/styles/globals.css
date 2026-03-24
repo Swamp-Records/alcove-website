@@ -28,12 +28,11 @@
 
 /* NAVBAR STYLES */
 .nav {
-  background-color: #171717;
-  color:#ededed;
+  background-color: #373333;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 12px;
 }
 
 .logo {
@@ -43,8 +42,10 @@
 
 .nav-links {
   display: flex;
-  gap: 30px;
-  font-size: 1.5rem;
+  color:#ededed;
+  gap: 40px;
+  font-size: 1.25rem;
+  margin-right: 40px;
 }
 
 /* ... STYLES */
