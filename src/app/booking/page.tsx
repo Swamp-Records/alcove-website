@@ -1,4 +1,4 @@
-//metadata for the about page
+// metadata for the booking page
 export const metadata = {
   title: "Booking",
   description: "Book this local indie band for your next event.",
@@ -6,8 +6,22 @@ export const metadata = {
 
 export default function Booking() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <h1>This is the <em>booking</em> page</h1>
-    </div>
+    <main className="min-h-screen px-6 py-16">
+      <div className="mx-auto flex max-w-6xl flex-col items-center">
+        <h1 className="mb-8 text-center font-crostan text-4xl text-white">
+          Book Alcove
+        </h1>
+
+        <div className="w-full overflow-hidden rounded-2xl bg-white/90 shadow-lg">
+          <iframe
+            src="https://calendly.com/jennasin1120/30min"
+            width="100%"
+            height="700"
+            frameBorder="0"
+            title="Calendly Booking"
+          ></iframe>
+        </div>
+      </div>
+    </main>
   );
 }
