@@ -6,15 +6,15 @@ export default function Navbar() {
     //this function is styled in the globals.css file and is imported into the layout.tsx file
     return <nav className="nav">
 
-        {/*clicking on the logo will take you to the home page*/}
-        <Link href="/" className="logo"><img src="/logo_navbar.png" alt="Alcove Logo" width={250}/></Link>
+        {/*<Link href="/" className="logo"><img src="/logo_navbar.png" alt="Alcove Logo" width={250}/></Link>*/}
+        {/*<Link href="/about">ABOUT</Link>*/}
 
         {/*the rest of the links will take you to their respective pages*/}
         <div className="nav-links">
-            <Link href="/about">About</Link>
-            <Link href="/shows">Shows</Link>
-            <Link href="/booking">Booking</Link>
-            <Link href="/epk">EPK</Link>
+            <Link href="/">HOME</Link>
+            <Link href="/booking">BOOKING</Link>
+            <Link href="/press-kit">PRESS KIT</Link>
+            <Link href="/shows">SHOWS</Link>
             
         </div>
 
