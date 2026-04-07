@@ -1,31 +1,17 @@
 import Navbar from "./_components/navbar";
+import '../styles/home_page.css';
+import ImageSwapper from "./_components/home_image_swapper";
+import Link from "next/link";
 
 export default function Home() {
   return (
-      <main className="home-bg">
+      <main className='home-bg'>
 
-        <div className="image-row">
-          <img className="title-bkgrd-img" src="/group_photo_home.png" alt="group_photo"/>
-          <img className="title-bkgrd-img" src="/group_photo_home.png" alt="group_photo"/>
-          <img className="title-bkgrd-img" src="/group_photo_home.png" alt="group_photo"/>
-        </div>
+        <Navbar></Navbar>
 
-        <div className="home-title">
-          <h1 className="big-title">ALCOVE</h1>
-          <h6 className="title-description">ROCK BAND FROM THE SWAMP LAND</h6>
-          <Navbar></Navbar>
-        </div>
+        <ImageSwapper></ImageSwapper>
 
-        <div className="home-content">
-          <img src="/left_arrow_home.png" alt="left_arrow"/>
-          <div className="arrow-box">
-            <img className="postcard-img" src="/postcard1_home.png" alt="postcard"/>
-          </div>
-          <img src="/right_arrow_home.png" alt="right_arrow"/>
-        </div>
-        <div className="button">
-          <button>"DECEMBER" OUT NOW</button>
-        </div>
+        <Link href="https://open.spotify.com/album/5i7PmsL8GZFdZmjZya5yfB?si=wr-xDd7fT1uBAhOccZ1TGw" className='button'>"DECEMBER" OUT NOW</Link>
 
       </main>
   );
