@@ -1,3 +1,5 @@
+import Navbar from "../_components/navbar";
+
 //metadata for the about page
 export const metadata = {
   title: "About",
@@ -6,8 +8,11 @@ export const metadata = {
 
 export default function about() {
     return(
-        <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-            <h1>This is the <em>about</em> page</h1>
-        </div>
+        <main>
+            <Navbar></Navbar>
+            <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
+                <h1>This is the <em>about</em> page</h1>
+            </div>
+        </main>
     );
 }
