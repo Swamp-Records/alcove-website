@@ -1,0 +1,93 @@
+
+
+/* HOME PAGE STYLES */
+
+.home-bg {
+  background-color: #FAF4C4;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home-content {
+  width: 80vw;
+  height: 90vh;
+
+  margin-top: 10vh;
+  
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  gap: 6vw;
+}
+
+.arrow-btn {
+    transition: opacity 0.3s ease;
+    position: relative;
+    top: 6%;
+}
+
+.arrow-btn:hover {
+    opacity: 0.8;
+}
+
+.arrow-btn:active {
+    opacity: 0.5;
+}
+
+.arrow-box {
+  width: 38vw;
+  height: 94vh;
+  margin-top: 10vh;
+  
+  display: flex;
+  align-items: center;
+
+  position: relative;
+
+  background-color: #FAF4C4;
+  border-color: #301C1B;
+  border-width: 4px;
+  border-radius: 21px;
+}
+
+.postcard-img {
+  width: auto;
+  max-width: none;
+  height: auto;
+  margin: 0 auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -47%);
+  position: absolute;
+}
+
+.button {
+  font-family: 'Crostan';
+  font-weight: 700;
+  font-size: 1.5625rem;
+  color: #FAF4C4;
+  background-color: #301C1B;
+
+  width: 46.64vw;
+  display: flex;
+  justify-content: center;
+  margin-top: 16vh;
+  margin-bottom: 10vh;
+
+  padding: 0.8rem;
+  border-color: #301C1B;
+  border-width: 3px;
+  border-radius: 21px;
+}
+
+.button:hover {
+    opacity: 0.8;
+}
+
+.button:active {
+    opacity: 0.5;
+}
