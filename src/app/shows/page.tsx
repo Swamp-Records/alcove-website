@@ -8,5 +8,10 @@ export const metadata = {
 };
 
 export default function ShowsPage() {
-  return <ShowsClient />;
+  return (
+    <main>
+      <Navbar></Navbar>
+      <ShowsClient />
+    </main>
+  );
 }
