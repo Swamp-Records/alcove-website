@@ -5,13 +5,12 @@ const showData = [
   { date: "APRIL 02, 2026", location: "NEW WORLD TAMPA", link: "https://www.eventbrite.com/..." },
   { date: "APRIL 03, 2026", location: "HEARTWOOD SOUNDSTAGE", link: "https://www.eventbrite.com/..." },
   { date: "APRIL 04, 2026", location: "BLUE JAY LISTENING ROOM", link: "https://www.eventbrite.com/..." },
-  { date: "APRIL 05, 2026", location: "LOCATION DETAILS", link: "https://www.eventbrite.com/..." },
 ];
 
 export default function ShowsClient() {
   return (
-    <main className="flex min-h-screen items-center justify-center bg-[#F9F4D2] p-4 pt-12">
-      <div className="relative w-full max-w-[95%] overflow-hidden rounded-[3rem] bg-[#E8D8B0] min-h-[750px] shadow-2xl">
+    <main className="flex min-h-screen items-center justify-center bg-[#FAF4C4] p-4 pt-12">
+      <div className="relative w-full max-w-[95%] overflow-hidden rounded-[3rem] bg-[#FAF4C4] min-h-[750px] shadow-2xl">
         
         {/* band image */}
         <div 
@@ -22,22 +21,35 @@ export default function ShowsClient() {
           }}
         />
         <div className="relative z-10 flex flex-col items-center pt-24 pb-12">
-          
           {/* header section */}
-          <div className="relative flex flex-col items-center mb-0 w-full overflow-visible">
-            <img src="/Star2.png" className="absolute left-[15%] top-30 w-50 h-auto z-40" alt="" />
-            
-            <h1 className="font-godens text-[120px] text-[#FAF4C4] outline-text leading-none tracking-normal">
+        <div className="relative flex flex-col items-center mb-0 w-full overflow-visible">
+            <div className="relative w-fit">
+            {/* star 2 */}
+            <img 
+              src="/Star2.png" 
+              className="absolute -left-55 top-35 w-50 h-auto z-40" 
+              alt="" 
+            />
+            <h1 className="font-gondens text-[135px] text-[#FAF4C4] outline-text leading-none tracking-normal">
               SHOWS
             </h1>
-
-            <img src="/OnTourNow!.png" className="absolute right-[15%] -bottom-38 w-60 h-auto rotate-[1deg] z-20" alt="" />
+            {/* OnTourNow */}
+            <img 
+              src="/OnTourNow!.png" 
+              className="absolute -right-50 -bottom-25 w-60 h-auto rotate-[1deg] z-20" 
+              alt="" 
+            />
           </div>
-
+          {/* star 3 */}
+          <img 
+              src="/Star3.png" 
+              className="absolute right-35 top-110 w-40 h-auto z-40" 
+              alt="" 
+            />
+        </div>
           {/* postcard */}
-          <div className="relative w-[90%] max-w-[70%] mt-[40px]">
+          <div className="relative w-[90%] max-w-[70%] -mt-[10px]">
             <img src="/postcard.png" className="w-full h-auto drop-shadow-md" alt="" />
-            <img src="/Star3.png" className="absolute -right-8 bottom-20 w-40 h-auto z-50" alt="" />
             <div className="absolute inset-0 flex flex-col pt-[16%] pb-[10%] px-[10%] md:px-[14%]">
               <div className="flex flex-col justify-between h-full w-full">
                 {showData.map((show, index) => (
@@ -71,7 +83,7 @@ export default function ShowsClient() {
 
       <style jsx>{`
         .outline-text {
-          -webkit-text-stroke: 3px #301C1B;
+          -webkit-text-stroke: 5px #301C1B;
           paint-order: stroke fill;
           display: inline-block;
         }
