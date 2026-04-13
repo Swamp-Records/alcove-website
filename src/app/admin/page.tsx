@@ -147,7 +147,7 @@ export default function AdminShowsPage() {
   return (
     <main className="min-h-screen bg-[#F9F4D2] px-6 py-12">
       <div className="mx-auto max-w-5xl">
-        <h1 className="mb-8 font-godens text-6xl text-[#2D2321]">SHOWS ADMIN</h1>
+        <h1 className="mb-8 font-godens text-6xl text-[#2D2321]">EDIT SHOWS</h1>
 
         <div className="mb-10 rounded-3xl bg-[#E8D8B0] p-8 shadow-lg">
           <h2 className="mb-6 font-crostan text-3xl text-[#2D2321]">
