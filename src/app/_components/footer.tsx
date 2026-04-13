@@ -3,11 +3,13 @@ import { SiApplemusic } from 'react-icons/si';
 
 export default function Footer() {
     return (
-        <footer className="w-full border-t py-6 px-8 text-sm">
-            <div className="flex justify-between items-center w-full">
+        <footer className="footer">
+            <img className="footer-img" src="/footer_image.png" alt="Footer image"/>
+            <img className="footer-overlay" src="/footer_overlay.png" alt="Footer overlay"/>
+            <div className="footer-text">
                 <p> © {new Date().getFullYear()} Alcove. All rights reserved.</p>
             
-                <div className="flex gap-6 text-xl">
+                <div className="footer-icons">
                     <a href="https://www.instagram.com/alcoveband_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                         target="_blank"
                         rel="noopener noreferrer"

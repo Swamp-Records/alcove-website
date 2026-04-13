@@ -1,9 +1,11 @@
 import { FaInstagram, FaSpotify, FaYoutube, FaEnvelope, FaTiktok} from "react-icons/fa";
 import { SiApplemusic } from 'react-icons/si';
 
-//metadata for the EPK page
+import Navbar from "../_components/navbar";
+
+//metadata for the Press Kit page
 export const metadata = {
-  title: "EPK",
+  title: "Press Kit",
   description: "Explore the official press kit for Alcove, the indie alternative band.",
 };
 
