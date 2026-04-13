@@ -81,10 +81,12 @@ export default function ShowsClient() {
 
   return (
     <main className="flex min-h-screen items-center justify-center bg-[#FAF4C4] p-4 pt-12">
-      <div className="relative min-h-[750px] w-full max-w-[95%] overflow-hidden rounded-[3rem] bg-[#E8D8B0] shadow-2xl">
-        <div
-          className="absolute inset-0 z-0 bg-cover bg-center"
-          style={{
+      <div className="relative w-full max-w-[95%] overflow-hidden rounded-[3rem] bg-[#FAF4C4] min-h-[750px] shadow-2xl">
+        
+        {/* band image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center z-0"
+          style={{ 
             backgroundImage: "url('/shows-band-image.png')",
             filter: 'sepia(10%) contrast(1.05)',
           }}
@@ -149,7 +151,7 @@ export default function ShowsClient() {
 
       <style jsx>{`
         .outline-text {
-          -webkit-text-stroke: 3px #301c1b;
+          -webkit-text-stroke: 5px #301C1B;
           paint-order: stroke fill;
           display: inline-block;
         }
