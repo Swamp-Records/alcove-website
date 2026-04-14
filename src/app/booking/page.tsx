@@ -52,10 +52,10 @@ export default function BookingPage() {
             TEXT US AT:
           </p>
           <a
-            href="tel:1234567890"
+            href="tel:5706562939"
             className="font-bebas text-[60px] leading-none text-[#2D2321]"
           >
-            123-456-7890
+            570-656-2939
           </a>
         </div>
 
