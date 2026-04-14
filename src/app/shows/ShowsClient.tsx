@@ -115,7 +115,7 @@ export default function ShowsClient() {
               <div className="flex h-full w-full flex-col justify-between">
                 {loading ? (
                   <p className="font-crostan text-lg text-[#2D2321]">Loading shows...</p>
-                ) : showData.length !== 0 ? (
+                ) : showData.length === 0 ? (
                   /*no shows message*/
                   <div className="flex flex-col items-center justify-center h-full text-center">
                     <p className="font-gondens text-4xl md:text-5xl text-[#2D2321] mb-3 tracking-wide">
