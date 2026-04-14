@@ -34,6 +34,23 @@ export default function AdminShowsPage() {
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
 
+  const [isUnlocked, setIsUnlocked] = useState(false);
+  const [passwordInput, setPasswordInput] = useState('');
+  const [passwordError, setPasswordError] = useState('');
+
+  useEffect(() => {
+    const unlocked = localStorage.getItem('alcove-admin-unlocked');
+    if (unlocked === 'true') {
+      setIsUnlocked(true);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (isUnlocked) {
+      fetchShows();
+    }
+  }, [isUnlocked]);
+
   async function fetchShows() {
     try {
       setLoading(true);
@@ -68,14 +85,32 @@ export default function AdminShowsPage() {
     }
   }
 
-  useEffect(() => {
-    fetchShows();
-  }, []);
-
   function toDateTimeLocalString(date: Date) {
     const offset = date.getTimezoneOffset();
     const localDate = new Date(date.getTime() - offset * 60000);
     return localDate.toISOString().slice(0, 16);
+  }
+
+  //password handling for admin page
+  function handlePasswordSubmit(e: React.FormEvent) {
+    e.preventDefault();
+
+    if (passwordInput === process.env.NEXT_PUBLIC_ADMIN_PASSWORD) {
+      localStorage.setItem('alcove-admin-unlocked', 'true');
+      setIsUnlocked(true);
+      setPasswordError('');
+      setPasswordInput('');
+    } else {
+      setPasswordError('Incorrect password.');
+    }
+  }
+
+  //lock page button handler
+  function handleLogout() {
+    localStorage.removeItem('alcove-admin-unlocked');
+    setIsUnlocked(false);
+    setPasswordInput('');
+    setPasswordError('');
   }
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
@@ -144,10 +179,56 @@ export default function AdminShowsPage() {
     }
   }
 
+  //if the page is not unlocked, show the password form, otherwise show the admin interface
+  if (!isUnlocked) {
+    return (
+      <main className="min-h-screen bg-[#F9F4D2] px-6 py-12 flex items-center justify-center">
+        <div className="w-full max-w-md rounded-3xl bg-[#E8D8B0] p-8 shadow-lg">
+          <h1 className="mb-6 font-godens text-6xl text-[#2D2321]">ADMIN</h1>
+
+          <form onSubmit={handlePasswordSubmit} className="space-y-5">
+            <div>
+              <label className="mb-2 block font-crostan text-sm font-bold uppercase tracking-wider text-[#2D2321]">
+                Password
+              </label>
+              <input
+                type="password"
+                value={passwordInput}
+                onChange={(e) => setPasswordInput(e.target.value)}
+                className="w-full rounded-xl border border-[#2D2321]/20 bg-[#FAF4C4] px-4 py-3 text-[#2D2321] outline-none"
+                placeholder="Enter password"
+              />
+            </div>
+
+            {passwordError && (
+              <p className="font-crostan text-sm text-red-700">{passwordError}</p>
+            )}
+
+            <button
+              type="submit"
+              className="rounded-full bg-[#2D2321] px-6 py-3 text-sm font-bold uppercase tracking-widest text-[#FAF4C4]"
+            >
+              Enter
+            </button>
+          </form>
+        </div>
+      </main>
+    );
+  }
+
   return (
     <main className="min-h-screen bg-[#F9F4D2] px-6 py-12">
       <div className="mx-auto max-w-5xl">
-        <h1 className="mb-8 font-godens text-6xl text-[#2D2321]">EDIT SHOWS</h1>
+        <div className="mb-8 flex items-center justify-between gap-4">
+          <h1 className="font-godens text-6xl text-[#2D2321]">EDIT SHOWS</h1>
+
+          <button
+            onClick={handleLogout}
+            className="rounded-full border border-[#2D2321] px-5 py-2 text-xs font-bold uppercase tracking-widest text-[#2D2321]"
+          >
+            Lock Page
+          </button>
+        </div>
 
         <div className="mb-10 rounded-3xl bg-[#E8D8B0] p-8 shadow-lg">
           <h2 className="mb-6 font-crostan text-3xl text-[#2D2321]">
