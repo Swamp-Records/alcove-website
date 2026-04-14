@@ -96,7 +96,7 @@ export default function ShowsClient() {
           <div className="relative mb-0 flex w-full flex-col items-center overflow-visible">
             <img src="/Star2.png" className="absolute left-[15%] top-30 z-40 h-auto w-50" alt="" />
 
-            <h1 className="outline-text font-godens text-[120px] leading-none tracking-normal text-[#FAF4C4]">
+            <h1 className="font-gondens text-[135px] text-[#FAF4C4] outline-text leading-none tracking-normal">
               SHOWS
             </h1>
 
