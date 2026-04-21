@@ -8,7 +8,7 @@ import {
   query,
   Timestamp,
   limit,
-} from 'firebase/firestore';
+} from 'firebase/firestore/lite';
 import { db } from '../../lib/firebase';
 
 type Show = {

@@ -11,7 +11,7 @@ import {
   query,
   Timestamp,
   updateDoc,
-} from 'firebase/firestore';
+} from 'firebase/firestore/lite';
 import { db } from '../../lib/firebase';
 
 type ShowRecord = {
