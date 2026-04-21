@@ -162,13 +162,6 @@ export default function ShowsClient() {
         </div>
       </div>
 
-      <style jsx>{`
-        .outline-text {
-          -webkit-text-stroke: 5px #301C1B;
-          paint-order: stroke fill;
-          display: inline-block;
-        }
-      `}</style>
     </main>
   );
 }

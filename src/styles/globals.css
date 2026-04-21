@@ -49,6 +49,13 @@
   font-style: normal;
 }
 
+/* Custom classes */
+.outline-text {
+  -webkit-text-stroke: 5px #301C1B;
+  paint-order: stroke fill;
+  display: inline-block;
+}
+
 @font-face {
   font-family: 'Bebas Neue';
   src: url('/fonts/BebasNeue-Regular.ttf') format('truetype');
