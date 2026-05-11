@@ -6,6 +6,9 @@ export default function ImageSwapper() {
     const [images, setImages] = useState ([
         {id: 1, src: "/postcard1_home.png", alt: "postcard1"},
         {id: 2, src: "/postcard2_home.png", alt: "postcard2"},
+        {id: 3, src: "/postcard3_home.png", alt: "postcard3"},
+        {id: 4, src: "/postcard4_home.png", alt: "postcard4"},
+        {id: 5, src: "/postcard5_home.png", alt: "postcard5"}
     ]);
 
     //used when right arrow is clicked (brings the first image to the end of the array))
@@ -33,10 +36,15 @@ export default function ImageSwapper() {
             {/* middle box plus images (the images are stacked on top of each other and the z-index is used to show only one image at a time) */}
           <div className='arrow-box'>
             {images.map((img, index) => (
-                <img key={img.id} className='postcard-img' src={img.src} alt={img.alt} style={{
-                    zIndex: index === 0 ? 4 : 1, 
-                    width: img.id === 2 ? "136%" : "70%",
-                }}/>
+                <img
+                    key={img.id}
+                    className={`postcard-img ${img.id === 2 || img.id === 3 || img.id === 4 || img.id === 5 ? 'postcard-img--wide' : 'postcard-img--standard'}`}
+                    src={img.src}
+                    alt={img.alt}
+                    style={{
+                        zIndex: index === 0 ? 4 : 1,
+                    }}
+                />
             ))}
 
             {/* the stars */}
