@@ -65,6 +65,14 @@
   position: absolute;
 }
 
+.postcard-img--wide {
+  width: 120%;
+}
+
+.postcard-img--standard {
+  width: 70%;
+}
+
 .button {
   font-family: 'Crostan';
   font-weight: 700;
