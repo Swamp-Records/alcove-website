@@ -6,6 +6,9 @@ export default function ImageSwapper() {
     const [images, setImages] = useState ([
         {id: 1, src: "/postcard1_home.png", alt: "postcard1"},
         {id: 2, src: "/postcard2_home.png", alt: "postcard2"},
+        {id: 3, src: "/postcard3_home.png", alt: "postcard3"},
+        {id: 4, src: "/postcard4_home.png", alt: "postcard4"},
+        {id: 5, src: "/postcard5_home.png", alt: "postcard5"}
     ]);
 
     //used when right arrow is clicked (brings the first image to the end of the array))
@@ -35,7 +38,7 @@ export default function ImageSwapper() {
             {images.map((img, index) => (
                 <img
                     key={img.id}
-                    className={`postcard-img ${img.id === 2 ? 'postcard-img--wide' : 'postcard-img--standard'}`}
+                    className={`postcard-img ${img.id === 2 || img.id === 3 || img.id === 4 || img.id === 5 ? 'postcard-img--wide' : 'postcard-img--standard'}`}
                     src={img.src}
                     alt={img.alt}
                     style={{
