@@ -106,7 +106,8 @@ export default function pressKit() {
               {/* CASSETTE IMAGE */}
               <img
                 src="/cassette.png"
-                className="absolute bottom-[-90px] right-[-45px] w-50 md:w-50 transform rotate-12"/>
+                className="absolute bottom-[-70px] right-[-20px] hidden w-40 rotate-12 transform sm:block md:bottom-[-90px] md:right-[-45px] md:w-50"
+              />
             </div>
           </section>
 

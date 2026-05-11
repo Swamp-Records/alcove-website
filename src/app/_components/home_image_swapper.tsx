@@ -33,10 +33,15 @@ export default function ImageSwapper() {
             {/* middle box plus images (the images are stacked on top of each other and the z-index is used to show only one image at a time) */}
           <div className='arrow-box'>
             {images.map((img, index) => (
-                <img key={img.id} className='postcard-img' src={img.src} alt={img.alt} style={{
-                    zIndex: index === 0 ? 4 : 1, 
-                    width: img.id === 2 ? "136%" : "70%",
-                }}/>
+                <img
+                    key={img.id}
+                    className={`postcard-img ${img.id === 2 ? 'postcard-img--wide' : 'postcard-img--standard'}`}
+                    src={img.src}
+                    alt={img.alt}
+                    style={{
+                        zIndex: index === 0 ? 4 : 1,
+                    }}
+                />
             ))}
 
             {/* the stars */}

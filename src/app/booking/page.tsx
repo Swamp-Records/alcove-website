@@ -16,13 +16,13 @@ export default function BookingPage() {
       <section className="mx-auto flex w-full max-w-5xl flex-col items-center text-center">
 
         {/* CONTACT US */}
-        <h1 className="font-gondens text-[120px] leading-none text-[#2D2321] mb-32">
+        <h1 className="mb-16 font-gondens text-[64px] leading-none text-[#2D2321] sm:text-[96px] md:mb-32 md:text-[120px]">
           CONTACT US
         </h1>
 
         {/* EMAIL SECTION */}
-        <div className="flex flex-col items-center mb-32">
-          <p className="font-gondens text-[27px] uppercase tracking-wide mb-8 text-[#2D2321]">
+        <div className="mb-16 flex flex-col items-center md:mb-32">
+          <p className="mb-5 font-gondens text-[16px] uppercase tracking-wide text-[#2D2321] sm:text-[20px] md:mb-8 md:text-[27px]">
             FOR ALL BUSINESS INQUIRIES, EMAIL US AT:
           </p>
 
@@ -34,7 +34,7 @@ export default function BookingPage() {
           </a> */}
           <a
             href="mailto:contact.alcovemusic@gmail.com"
-            className="text-[45px] leading-none text-[#2D2321]"
+            className="max-w-full wrap-break-word text-[22px] leading-tight text-[#2D2321] sm:text-[32px] md:text-[45px] md:leading-none"
           >
             <span className="font-gondens">CONTACT</span>
             <span className="font-bebas">.</span>
@@ -47,13 +47,13 @@ export default function BookingPage() {
         </div>
 
         {/* PHONE SECTION */}
-        <div className="flex flex-col items-center mb-10">
-          <p className="font-gondens text-[27px] uppercase tracking-wide mb-8 text-[#2D2321]">
+        <div className="mb-10 flex flex-col items-center">
+          <p className="mb-5 font-gondens text-[16px] uppercase tracking-wide text-[#2D2321] sm:text-[20px] md:mb-8 md:text-[27px]">
             TEXT US AT:
           </p>
           <a
             href="tel:5706562939"
-            className="font-bebas text-[60px] leading-none text-[#2D2321]"
+            className="font-bebas text-[40px] leading-none text-[#2D2321] sm:text-[52px] md:text-[60px]"
           >
             570-656-2939
           </a>

@@ -81,7 +81,7 @@ export default function ShowsClient() {
 
   return (
     <main className="flex min-h-screen items-center justify-center bg-[#FAF4C4] p-4 pt-12">
-      <div className="relative w-full max-w-[95%] overflow-hidden rounded-[3rem] bg-[#FAF4C4] min-h-[750px] shadow-2xl">
+      <div className="relative w-full max-w-[95%] overflow-hidden rounded-4xl bg-[#FAF4C4] min-h-[620px] shadow-2xl sm:rounded-[3rem] sm:min-h-[750px]">
         
         {/* band image */}
         <div 
@@ -92,26 +92,34 @@ export default function ShowsClient() {
           }}
         />
 
-        <div className="relative z-10 flex flex-col items-center pt-24 pb-12">
+        <div className="relative z-10 flex flex-col items-center pt-16 pb-10 sm:pt-24 sm:pb-12">
           <div className="relative mb-0 flex w-full flex-col items-center overflow-visible">
-            <img src="/Star2.png" className="absolute left-[15%] top-30 z-40 h-auto w-50" alt="" />
+            <img
+              src="/Star2.png"
+              className="absolute left-[6%] top-10 z-40 h-auto w-24 sm:left-[15%] sm:top-30 sm:w-50"
+              alt=""
+            />
 
-            <h1 className="font-gondens text-[135px] text-[#FAF4C4] outline-text leading-none tracking-normal">
+            <h1 className="font-gondens text-[76px] text-[#FAF4C4] outline-text leading-none tracking-normal sm:text-[135px]">
               SHOWS
             </h1>
 
             <img
               src="/OnTourNow!.png"
-              className="absolute right-[15%] -bottom-38 z-20 h-auto w-60 rotate-[1deg]"
+              className="absolute right-[6%] -bottom-16 z-20 h-auto w-36 rotate-1 sm:right-[15%] sm:-bottom-38 sm:w-60"
               alt=""
             />
           </div>
 
-          <div className="relative mt-[40px] w-[90%] max-w-[70%]">
+          <div className="relative mt-6 w-[92%] max-w-none sm:mt-[40px] sm:w-[90%] sm:max-w-[70%]">
             <img src="/postcard.png" className="h-auto w-full drop-shadow-md" alt="" />
-            <img src="/Star3.png" className="absolute -right-8 bottom-20 z-50 h-auto w-40" alt="" />
+            <img
+              src="/Star3.png"
+              className="absolute -right-3 bottom-10 z-50 h-auto w-20 sm:-right-8 sm:bottom-20 sm:w-40"
+              alt=""
+            />
 
-            <div className="absolute inset-0 flex flex-col px-[10%] pt-[16%] pb-[10%] md:px-[14%]">
+            <div className="absolute inset-0 flex flex-col px-[10%] pt-[16%] pb-[10%] sm:px-[12%] md:px-[14%]">
               <div className="flex h-full w-full flex-col justify-between">
                 {loading ? (
                   <p className="font-crostan text-lg text-[#2D2321]">Loading shows...</p>
@@ -134,13 +142,13 @@ export default function ShowsClient() {
                   showData.map((show) => (
                     <div
                       key={show.id}
-                      className="flex items-center justify-between border-b border-black/10 py-2 last:border-0"
+                      className="flex flex-col gap-2 border-b border-black/10 py-2 last:border-0 sm:flex-row sm:items-center sm:justify-between sm:gap-4"
                     >
                       <div className="flex flex-col font-crostan">
-                        <p className="text-lg leading-none tracking-tighter text-[#2D2321] font-bold md:text-2xl">
+                        <p className="text-base font-bold leading-none tracking-tighter text-[#2D2321] sm:text-lg md:text-2xl">
                           {show.date}
                         </p>
-                        <p className="mt-1 text-[10px] font-bold uppercase tracking-[0.15em] text-[#6B6B6B]">
+                        <p className="mt-1 text-[10px] font-bold uppercase tracking-[0.15em] text-[#6B6B6B] sm:text-[10px]">
                           {show.location}
                         </p>
                       </div>
@@ -149,7 +157,7 @@ export default function ShowsClient() {
                         href={show.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="whitespace-nowrap rounded-full bg-[#2D2321] px-5 py-1.5 text-[10px] font-bold italic uppercase tracking-widest text-[#FAF4C4] transition-transform hover:bg-black active:scale-95"
+                        className="w-full whitespace-nowrap rounded-full bg-[#2D2321] px-5 py-2 text-center text-[10px] font-bold italic uppercase tracking-widest text-[#FAF4C4] transition-transform hover:bg-black active:scale-95 sm:w-auto sm:py-1.5"
                       >
                         TICKETS
                       </a>
@@ -164,9 +172,15 @@ export default function ShowsClient() {
 
       <style jsx>{`
         .outline-text {
-          -webkit-text-stroke: 5px #301C1B;
+          -webkit-text-stroke: 3px #301C1B;
           paint-order: stroke fill;
           display: inline-block;
+        }
+
+        @media (min-width: 640px) {
+          .outline-text {
+            -webkit-text-stroke: 5px #301C1B;
+          }
         }
       `}</style>
     </main>
